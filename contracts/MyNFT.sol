@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
+pragma solidity >=0.5.0 <0.9.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -17,7 +17,7 @@ contract MyNFT is ERC721URIStorage , Ownable {
     function mintNFT(address recipient, string memory tokenURI) public onlyOwner returns(uint256){
         _tokenIds.increment();
 
-        uint256 newItemId = tokenIds.current();
+        uint256 newItemId = _tokenIds.current();
         _mint(recipient,newItemId);
         _setTokenURI(newItemId,tokenURI);
 
