@@ -22,5 +22,3 @@ module.exports = {
       }
    },
 }
-
-//0x8721E4b3ce404Ff0513aE687b9d62DEaDA0a281C    nft contract address
